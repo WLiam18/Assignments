@@ -1,0 +1,15 @@
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/bin/Debug/net10.0/Assignment1_AppointmentSystem
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/bin/Debug/net10.0/Assignment1_AppointmentSystem.deps.json
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/bin/Debug/net10.0/Assignment1_AppointmentSystem.runtimeconfig.json
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/bin/Debug/net10.0/Assignment1_AppointmentSystem.dll
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/bin/Debug/net10.0/Assignment1_AppointmentSystem.pdb
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.AssemblyInfoInputs.cache
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.AssemblyInfo.cs
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.csproj.CoreCompileInputs.cache
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.sourcelink.json
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.dll
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/refint/Assignment1_AppointmentSystem.dll
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.pdb
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/Assignment1_AppointmentSystem.genruntimeconfig.cache
+/Users/williamgiftson/Assignments/CSharp/Assignment1_AppointmentSystem/obj/Debug/net10.0/ref/Assignment1_AppointmentSystem.dll
