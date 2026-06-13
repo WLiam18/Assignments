@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCourierApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb593d74755f11f219fe28a4511ef2e1c5328fa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c70bb2628ab74b18cffebeb58cb86fd3c69e09d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCourierApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCourierApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
