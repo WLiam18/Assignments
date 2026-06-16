@@ -1,0 +1,70 @@
+@model IEnumerable<ECommercePlatform.ViewModels.ProductIndexViewModel>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>🛒 Our Products</h1>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="row">
+    <!-- Categories Sidebar -->
+    <div class="col-md-3">
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Categories</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="/Product" class="list-group-item list-group-item-action">
+                    All Products
+                </a>
+                @foreach (var cat in ViewBag.Categories as List<ECommercePlatform.Models.Category>)
+                {
+                    <a href="/Product?categoryId=@cat.Id" class="list-group-item list-group-item-action">
+                        @cat.Name
+                    </a>
+                }
+                <a href="/Category" class="list-group-item list-group-item-action text-primary">
+                    Manage Categories →
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Products List -->
+    <div class="col-md-9">
+        <p>
+            <a asp-action="Create" class="btn btn-primary">➕ Add New Product</a>
+        </p>
+        
+        <div class="row">
+            @foreach (var product in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" 
+                             style="height: 180px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text text-truncate">@product.Description</p>
+                            <p class="card-text">
+                                <strong>Price:</strong> @product.Price<br />
+                                <strong>Stock:</strong> @product.StockQuantity<br />
+                                <strong>Category:</strong> @product.CategoryName
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-sm btn-info">Details</a>
+                            <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

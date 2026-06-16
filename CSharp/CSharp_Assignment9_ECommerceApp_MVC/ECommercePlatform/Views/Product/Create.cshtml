@@ -1,0 +1,90 @@
+@model ECommercePlatform.ViewModels.ProductCreateViewModel
+
+@{
+    ViewData["Title"] = "Add Product";
+    var categories = ViewBag.Categories as List<ECommercePlatform.Models.Category>;
+}
+
+<h1>Add New Product</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="StockQuantity" class="control-label"></label>
+                <input asp-for="StockQuantity" class="form-control" />
+                <span asp-validation-for="StockQuantity" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" placeholder="https://example.com/image.jpg" />
+                <small class="form-text text-muted">Enter a URL to an image online</small>
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control">
+                    <option value="">-- Select Category --</option>
+                    @foreach (var cat in categories)
+                    {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">Image Preview</div>
+            <div class="card-body text-center">
+                <img id="imagePreview" src="https://picsum.photos/200/150" 
+                     style="max-width: 100%; height: auto;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        document.getElementById('ImageUrl').addEventListener('input', function() {
+            var preview = document.getElementById('imagePreview');
+            if (this.value) {
+                preview.src = this.value;
+            } else {
+                preview.src = 'https://picsum.photos/200/150';
+            }
+        });
+    </script>
+}

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ECommercePlatform.Models.Product>
+
+@{
+    ViewData["Title"] = "Home - E-Commerce Store";
+}
+
+<div class="text-center bg-light py-5 mb-4">
+    <h1 class="display-4">🛒 Welcome to Our Store!</h1>
+    <p class="lead">Shop the best products at amazing prices</p>
+    <a href="/Product" class="btn btn-primary btn-lg">Shop Now</a>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <!-- Categories Sidebar -->
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Categories</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="/Product" class="list-group-item list-group-item-action">
+                    All Products
+                </a>
+                @foreach (var cat in ViewBag.Categories as List<ECommercePlatform.Models.Category>)
+                {
+                    <a href="/Product?categoryId=@cat.Id" class="list-group-item list-group-item-action">
+                        @cat.Name
+                    </a>
+                }
+                <a href="/Category" class="list-group-item list-group-item-action text-primary">
+                    Manage Categories →
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-9">
+        <h2>Featured Products</h2>
+        <div class="row">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <img src="@(product.ImageUrl ?? "https://picsum.photos/200/150")" 
+                                 class="card-img-top" alt="@product.Name"
+                                 style="height: 180px; object-fit: cover;" />
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Name</h5>
+                                <p class="card-text text-truncate">@product.Description</p>
+                                <p class="card-text">
+                                    <strong>@product.Price</strong>
+                                </p>
+                                @if (product.StockQuantity > 0)
+                                {
+                                    <span class="badge bg-success">In Stock</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Out of Stock</span>
+                                }
+                            </div>
+                            <div class="card-footer">
+                                <a href="/Product/Details/@product.Id" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <div class="alert alert-info">No products available yet.</div>
+                </div>
+            }
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="/Product" class="btn btn-outline-primary">View All Products →</a>
+        </div>
+    </div>
+</div>
