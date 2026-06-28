@@ -16,5 +16,5 @@ A simple one-page portfolio site built with plain HTML and CSS.
 - Contact info
 ## Built with
  
-- HTML5
+- HTML
 - CSS3
