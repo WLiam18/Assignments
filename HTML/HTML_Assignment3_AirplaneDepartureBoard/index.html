@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departures</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="header-left">
+                <span class="dot"></span>
+                <h1>Departures</h1>
+            </div>
+            <div class="header-right">
+                <div class="clock" id="clock">--:--</div>
+                <div class="counter" id="counter">0 flights</div>
+            </div>
+        </header>
+
+        <div class="board-wrapper">
+            <div class="board-header">
+                <span>Time</span>
+                <span>Flight</span>
+                <span>Destination</span>
+                <span>Gate</span>
+                <span>Status</span>
+            </div>
+            <div class="board" id="board"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-add" id="addBtn">+ Add departure</button>
+            <button class="btn btn-reset" id="resetBtn">Reset board</button>
+        </div>
+
+        <div class="form-row">
+            <input type="text" id="flightInput" placeholder="Flight (e.g. BA204)" />
+            <input type="text" id="destInput" placeholder="Destination" />
+            <input type="text" id="gateInput" placeholder="Gate" />
+            <button class="btn btn-submit" id="customAddBtn">Add flight</button>
+        </div>
+
+        <footer>
+            <span> --Live Flight Updates-- </span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

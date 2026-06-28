@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar — Cedar Hill stargazing club</title>
+  <meta name="description" content="Northstar is a community of stargazers meeting every clear Friday night at Cedar Hill. See upcoming events, the spring schedule, and how to join.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true">✦</span>
+        Northstar
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <a href="#events">Events</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <div class="hero-sky" aria-hidden="true">
+        <span class="star" style="--x:8%; --y:20%; --d:0s;"></span>
+        <span class="star" style="--x:18%; --y:62%; --d:.6s;"></span>
+        <span class="star" style="--x:27%; --y:15%; --d:1.4s;"></span>
+        <span class="star" style="--x:34%; --y:78%; --d:.2s;"></span>
+        <span class="star star--big" style="--x:42%; --y:38%; --d:2s;"></span>
+        <span class="star" style="--x:51%; --y:58%; --d:.9s;"></span>
+        <span class="star" style="--x:58%; --y:22%; --d:1.7s;"></span>
+        <span class="star" style="--x:66%; --y:70%; --d:.4s;"></span>
+        <span class="star star--big" style="--x:73%; --y:34%; --d:1.1s;"></span>
+        <span class="star" style="--x:80%; --y:54%; --d:2.3s;"></span>
+        <span class="star" style="--x:88%; --y:18%; --d:.7s;"></span>
+        <span class="star" style="--x:93%; --y:64%; --d:1.5s;"></span>
+        <span class="star" style="--x:14%; --y:42%; --d:1.9s;"></span>
+        <span class="star" style="--x:62%; --y:8%; --d:.3s;"></span>
+        <span class="shooting-star" style="--x:85%; --y:12%; --d:1.5s;"></span>
+        <span class="shooting-star" style="--x:38%; --y:6%; --d:4.8s;"></span>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Cedar Hill · every clear Friday</p>
+        <h1>Look up with us.</h1>
+        <p class="hero-sub">A community of stargazers meeting every clear Friday night.</p>
+        <a class="btn btn--primary" href="#join">Join the club</a>
+      </div>
+    </section>
+
+    <section class="section section--events" id="events" aria-labelledby="events-heading">
+      <div class="wrap">
+        <h2 id="events-heading">Upcoming events</h2>
+        <ul class="event-grid">
+          <li class="card event-card">
+            <span class="badge">New</span>
+            <h3>Jupiter night</h3>
+            <p class="event-date">Apr 12</p>
+            <p>The gas giant and its four Galilean moons.</p>
+          </li>
+          <li class="card event-card">
+            <h3>Lunar close-up</h3>
+            <p class="event-date">Apr 26</p>
+            <p>Craters along the terminator.</p>
+          </li>
+          <li class="card event-card">
+            <h3>Saturn's rings</h3>
+            <p class="event-date">May 10</p>
+            <p>The biggest "wow" for newcomers.</p>
+          </li>
+          <li class="card event-card">
+            <h3>Deep sky weekend</h3>
+            <p class="event-date">May 24</p>
+            <p>Globular clusters, if the smoke stays away.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--schedule" id="schedule" aria-labelledby="schedule-heading">
+      <div class="wrap">
+        <h2 id="schedule-heading">Spring schedule</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Location</th>
+                <th scope="col">Target</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apr 12</td>
+                <td>Cedar Hill</td>
+                <td>Jupiter</td>
+              </tr>
+              <tr>
+                <td>Apr 26</td>
+                <td>Cedar Hill</td>
+                <td>The Moon</td>
+              </tr>
+              <tr>
+                <td>May 10</td>
+                <td>Dunes Park</td>
+                <td>Saturn</td>
+              </tr>
+              <tr>
+                <td>May 24</td>
+                <td>Cedar Hill</td>
+                <td>Globular clusters</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="schedule-note">Rained out or too hazy? We push the same target to the next clear Friday rather than skipping it.</p>
+      </div>
+    </section>
+
+    <section class="section section--join" id="join" aria-labelledby="join-heading">
+      <div class="wrap">
+        <h2 id="join-heading">Join the club</h2>
+        <div class="join-layout">
+          <p class="join-blurb">No telescope, no experience, no problem &mdash; we've got spare binoculars and people who like explaining things. Tell us a bit about yourself and we'll add you to the Friday list.</p>
+          <form class="card join-form" action="#" method="post">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="experience">Experience</label>
+              <select id="experience" name="experience">
+                <option value="none">Never used a telescope</option>
+                <option value="some">Owned binoculars, casual</option>
+                <option value="comfortable">Comfortable with a scope</option>
+                <option value="experienced">Bring my own gear</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Join the club</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Northstar Astronomy Club &middot; Cedar Hill &middot; hi@northstar.club</p>
+    <p class="footer-fine">&copy; 2026 Northstar &middot; Built with HTML &amp; CSS.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const primaryNav = document.getElementById('primaryNav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    primaryNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        primaryNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>

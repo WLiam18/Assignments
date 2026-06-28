@@ -7,6 +7,17 @@ A simple library management system built with ASP.NET Core MVC using Code First 
 - Add, Edit, Delete books
 - View book details
 
+## What is MVC?
+
+MVC stands for **Model-View-Controller**. It separates your app into three parts:
+
+- **Model** → Manages data and database
+- **View** → Handles what the user sees (UI)
+- **Controller** → Takes user requests, processes them, and returns the response
+
+This makes the code organized, reusable, and easier to maintain.
+
+
 
 ## Screenshots
 
